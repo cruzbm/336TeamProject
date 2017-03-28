@@ -1,0 +1,393 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!--
+- phpMyAdmin XML Dump
+- version 4.0.10deb1
+- http://www.phpmyadmin.net
+-
+- Host: 127.0.0.1
+- Generation Time: Mar 28, 2017 at 03:50 AM
+- Server version: 5.5.53-0ubuntu0.14.04.1
+- PHP Version: 5.5.9-1ubuntu4.20
+-->
+
+<pma_xml_export version="1.0" xmlns:pma="http://www.phpmyadmin.net/some_doc_url/">
+    <!--
+    - Structure schemas
+    -->
+    <pma:structure_schemas>
+        <pma:database name="336TP" collation="latin1_swedish_ci" charset="latin1">
+            <pma:table name="Manufacturer">
+                CREATE TABLE `Manufacturer` (
+                  `manufacturerId` int(4) NOT NULL,
+                  `manufacturerName` varchar(255) NOT NULL,
+                  PRIMARY KEY (`manufacturerId`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="Part">
+                CREATE TABLE `Part` (
+                  `partId` int(255) NOT NULL,
+                  `partName` varchar(255) NOT NULL,
+                  `partMaterial` varchar(255) DEFAULT NULL,
+                  `partCoating` varchar(255) DEFAULT NULL,
+                  `partCaliber` varchar(255) DEFAULT NULL,
+                  `partPrice` decimal(10,2) NOT NULL,
+                  `imageId` tinyint(4) NOT NULL,
+                  `partTypeId` int(4) NOT NULL,
+                  `manufacturerId` int(4) NOT NULL,
+                  PRIMARY KEY (`partId`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+            <pma:table name="PartType">
+                CREATE TABLE `PartType` (
+                  `partTypeId` int(4) NOT NULL,
+                  `partType` varchar(255) NOT NULL,
+                  `weaponType` varchar(255) NOT NULL,
+                  PRIMARY KEY (`partTypeId`)
+                ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+            </pma:table>
+        </pma:database>
+    </pma:structure_schemas>
+
+    <!--
+    - Database: '336TP'
+    -->
+    <database name="336TP">
+        <!-- Table Manufacturer -->
+        <table name="Manufacturer">
+            <column name="manufacturerId">1000</column>
+            <column name="manufacturerName">Colt</column>
+        </table>
+        <table name="Manufacturer">
+            <column name="manufacturerId">2000</column>
+            <column name="manufacturerName">S&amp;W</column>
+        </table>
+        <table name="Manufacturer">
+            <column name="manufacturerId">3000</column>
+            <column name="manufacturerName">Glock</column>
+        </table>
+        <table name="Manufacturer">
+            <column name="manufacturerId">4000</column>
+            <column name="manufacturerName">Springfield</column>
+        </table>
+        <table name="Manufacturer">
+            <column name="manufacturerId">5000</column>
+            <column name="manufacturerName">Rock Island Armory</column>
+        </table>
+        <!-- Table Part -->
+        <table name="Part">
+            <column name="partId">1101</column>
+            <column name="partName">AR-15 Upper Receiver Assembly 16&quot;</column>
+            <column name="partMaterial">NULL</column>
+            <column name="partCoating">Black</column>
+            <column name="partCaliber">5.56</column>
+            <column name="partPrice">865.00</column>
+            <column name="imageId">10</column>
+            <column name="partTypeId">100</column>
+            <column name="manufacturerId">1000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">1201</column>
+            <column name="partName">Colt 1911A1 Slide</column>
+            <column name="partMaterial">Stainless Steel</column>
+            <column name="partCoating">Stainless Steel</column>
+            <column name="partCaliber">.45ACP</column>
+            <column name="partPrice">200.00</column>
+            <column name="imageId">11</column>
+            <column name="partTypeId">200</column>
+            <column name="manufacturerId">1000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">1301</column>
+            <column name="partName">M4 Carbine Lower Receiver Assembly</column>
+            <column name="partMaterial"></column>
+            <column name="partCoating">Black</column>
+            <column name="partCaliber">5.56</column>
+            <column name="partPrice">399.00</column>
+            <column name="imageId">14</column>
+            <column name="partTypeId">300</column>
+            <column name="manufacturerId">1000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">1501</column>
+            <column name="partName">AR15/M16/M4 30rd USGI Magazine</column>
+            <column name="partMaterial">Aluminum</column>
+            <column name="partCoating">NULL</column>
+            <column name="partCaliber">5.56</column>
+            <column name="partPrice">19.99</column>
+            <column name="imageId">15</column>
+            <column name="partTypeId">500</column>
+            <column name="manufacturerId">1000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">1601</column>
+            <column name="partName">1911 45ACP Magazine</column>
+            <column name="partMaterial">Stainless Steel</column>
+            <column name="partCoating">Stainless Steel</column>
+            <column name="partCaliber">.45ACP</column>
+            <column name="partPrice">23.99</column>
+            <column name="imageId">13</column>
+            <column name="partTypeId">300</column>
+            <column name="manufacturerId">1000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">1801</column>
+            <column name="partName">Colt High Profile Rear Sight 1911</column>
+            <column name="partMaterial">Stainless Steel</column>
+            <column name="partCoating">Stainless Steel</column>
+            <column name="partCaliber">NULL</column>
+            <column name="partPrice">15.00</column>
+            <column name="imageId">12</column>
+            <column name="partTypeId">800</column>
+            <column name="manufacturerId">1000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">1901</column>
+            <column name="partName">M4 Carbine</column>
+            <column name="partMaterial">NULL</column>
+            <column name="partCoating">Black</column>
+            <column name="partCaliber">5.56</column>
+            <column name="partPrice">1400.00</column>
+            <column name="imageId">1</column>
+            <column name="partTypeId">901</column>
+            <column name="manufacturerId">1000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">1902</column>
+            <column name="partName">Colt 1911 O1091</column>
+            <column name="partMaterial"></column>
+            <column name="partCoating"></column>
+            <column name="partCaliber">.45 ACP</column>
+            <column name="partPrice">900.00</column>
+            <column name="imageId">2</column>
+            <column name="partTypeId">902</column>
+            <column name="manufacturerId">1000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">2101</column>
+            <column name="partName">M&amp;P 15 Upper Assembly</column>
+            <column name="partMaterial">NULL</column>
+            <column name="partCoating">Black Melonite</column>
+            <column name="partCaliber">5.56</column>
+            <column name="partPrice">749.99</column>
+            <column name="imageId">16</column>
+            <column name="partTypeId">100</column>
+            <column name="manufacturerId">2000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">2301</column>
+            <column name="partName">M&amp;P 15 Lower Receiver</column>
+            <column name="partMaterial">Polymer</column>
+            <column name="partCoating">Black</column>
+            <column name="partCaliber">5.56</column>
+            <column name="partPrice">349.99</column>
+            <column name="imageId">17</column>
+            <column name="partTypeId">300</column>
+            <column name="manufacturerId">2000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">2501</column>
+            <column name="partName">M&amp;P 15 15rd PMag</column>
+            <column name="partMaterial">Polymer</column>
+            <column name="partCoating">Flat Dark Earth</column>
+            <column name="partCaliber">5.56</column>
+            <column name="partPrice">20.00</column>
+            <column name="imageId">18</column>
+            <column name="partTypeId">500</column>
+            <column name="manufacturerId">2000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">2601</column>
+            <column name="partName">MP 15Rnd 40SW ProMag</column>
+            <column name="partMaterial">Steel</column>
+            <column name="partCoating">Black</column>
+            <column name="partCaliber">.40S&amp;W</column>
+            <column name="partPrice">19.99</column>
+            <column name="imageId">19</column>
+            <column name="partTypeId">600</column>
+            <column name="manufacturerId">2000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">2901</column>
+            <column name="partName">M&amp;P 15 Magpul Spec Series</column>
+            <column name="partMaterial">NULL</column>
+            <column name="partCoating">Flat Dark Earth</column>
+            <column name="partCaliber">5.56</column>
+            <column name="partPrice">1500.00</column>
+            <column name="imageId">3</column>
+            <column name="partTypeId">901</column>
+            <column name="manufacturerId">2000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">2902</column>
+            <column name="partName">M&amp;P Performance Center Shield</column>
+            <column name="partMaterial">NULL</column>
+            <column name="partCoating">Black</column>
+            <column name="partCaliber">.40 S&amp;W</column>
+            <column name="partPrice">424.99</column>
+            <column name="imageId">4</column>
+            <column name="partTypeId">902</column>
+            <column name="manufacturerId">2000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">3201</column>
+            <column name="partName">Glock 19 Slide</column>
+            <column name="partMaterial">Steel</column>
+            <column name="partCoating">Cerakote</column>
+            <column name="partCaliber">9mm</column>
+            <column name="partPrice">329.00</column>
+            <column name="imageId">20</column>
+            <column name="partTypeId">200</column>
+            <column name="manufacturerId">3000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">3301</column>
+            <column name="partName">Glock 19 Frame</column>
+            <column name="partMaterial">Polymer</column>
+            <column name="partCoating">OD Green</column>
+            <column name="partCaliber">9mm</column>
+            <column name="partPrice">200.00</column>
+            <column name="imageId">21</column>
+            <column name="partTypeId">400</column>
+            <column name="manufacturerId">3000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">3902</column>
+            <column name="partName">Glock 19</column>
+            <column name="partMaterial">NULL</column>
+            <column name="partCoating">Matte Black</column>
+            <column name="partCaliber">9mm</column>
+            <column name="partPrice">530.00</column>
+            <column name="imageId">5</column>
+            <column name="partTypeId">902</column>
+            <column name="manufacturerId">3000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">4101</column>
+            <column name="partName">Springfield M14 Receiver, Semi-Automatic</column>
+            <column name="partMaterial">Steel</column>
+            <column name="partCoating">Steel</column>
+            <column name="partCaliber">7.62</column>
+            <column name="partPrice">589.99</column>
+            <column name="imageId">22</column>
+            <column name="partTypeId">100</column>
+            <column name="manufacturerId">4000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">4301</column>
+            <column name="partName">ProMag Springfield M14 Archangel Precision Stock</column>
+            <column name="partMaterial">Polymer</column>
+            <column name="partCoating">Black</column>
+            <column name="partCaliber">NULL</column>
+            <column name="partPrice">300.00</column>
+            <column name="imageId">23</column>
+            <column name="partTypeId">500</column>
+            <column name="manufacturerId">4000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">4701</column>
+            <column name="partName">Springfield Armory M1A Match Sight Kit</column>
+            <column name="partMaterial">Steel</column>
+            <column name="partCoating">Steel</column>
+            <column name="partCaliber">NULL</column>
+            <column name="partPrice">179.99</column>
+            <column name="imageId">24</column>
+            <column name="partTypeId">700</column>
+            <column name="manufacturerId">4000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">4901</column>
+            <column name="partName">Springfield Loaded M1A</column>
+            <column name="partMaterial">NULL</column>
+            <column name="partCoating">Flat Desert</column>
+            <column name="partCaliber">7.62</column>
+            <column name="partPrice">1899.99</column>
+            <column name="imageId">6</column>
+            <column name="partTypeId">901</column>
+            <column name="manufacturerId">4000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">4902</column>
+            <column name="partName">Springfield XD MOD.2 Tactical</column>
+            <column name="partMaterial">NULL</column>
+            <column name="partCoating">Carbon Black</column>
+            <column name="partCaliber">9mm</column>
+            <column name="partPrice">550.00</column>
+            <column name="imageId">7</column>
+            <column name="partTypeId">902</column>
+            <column name="manufacturerId">4000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">5092</column>
+            <column name="partName">TCM TAC Ultra FS Combo</column>
+            <column name="partMaterial">NULL</column>
+            <column name="partCoating">Carbon Black</column>
+            <column name="partCaliber">22TCM</column>
+            <column name="partPrice">1000.00</column>
+            <column name="imageId">9</column>
+            <column name="partTypeId">902</column>
+            <column name="manufacturerId">5000</column>
+        </table>
+        <table name="Part">
+            <column name="partId">5901</column>
+            <column name="partName">RIA MIG 22 Rifle - Tactical</column>
+            <column name="partMaterial">Aluminum</column>
+            <column name="partCoating">Black</column>
+            <column name="partCaliber">22LR</column>
+            <column name="partPrice">600.00</column>
+            <column name="imageId">8</column>
+            <column name="partTypeId">901</column>
+            <column name="manufacturerId">5000</column>
+        </table>
+        <!-- Table PartType -->
+        <table name="PartType">
+            <column name="partTypeId">100</column>
+            <column name="partType">Upper Receiver</column>
+            <column name="weaponType">Rifle</column>
+        </table>
+        <table name="PartType">
+            <column name="partTypeId">200</column>
+            <column name="partType">Slide</column>
+            <column name="weaponType">Pistol</column>
+        </table>
+        <table name="PartType">
+            <column name="partTypeId">300</column>
+            <column name="partType">Lower Receiver</column>
+            <column name="weaponType">Rifle</column>
+        </table>
+        <table name="PartType">
+            <column name="partTypeId">400</column>
+            <column name="partType">Frame</column>
+            <column name="weaponType">Pistol</column>
+        </table>
+        <table name="PartType">
+            <column name="partTypeId">500</column>
+            <column name="partType">Magazine</column>
+            <column name="weaponType">Rifle</column>
+        </table>
+        <table name="PartType">
+            <column name="partTypeId">600</column>
+            <column name="partType">Magazine</column>
+            <column name="weaponType">Pistol</column>
+        </table>
+        <table name="PartType">
+            <column name="partTypeId">700</column>
+            <column name="partType">Sights</column>
+            <column name="weaponType">Rifle</column>
+        </table>
+        <table name="PartType">
+            <column name="partTypeId">800</column>
+            <column name="partType">Sights</column>
+            <column name="weaponType">Pistol</column>
+        </table>
+        <table name="PartType">
+            <column name="partTypeId">901</column>
+            <column name="partType">Fully Assembled</column>
+            <column name="weaponType">Rifle</column>
+        </table>
+        <table name="PartType">
+            <column name="partTypeId">902</column>
+            <column name="partType">Fully Assembled</column>
+            <column name="weaponType">Pistol</column>
+        </table>
+    </database>
+</pma_xml_export>
