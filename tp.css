@@ -1,0 +1,37 @@
+html{
+    text-align: center;
+    margin: 0 auto;
+    width: 80%;
+}
+
+body{
+    margin: 0 auto;
+    width: 80%;
+    background-color: #4CAF50;
+    font-family: sans-serif;
+}
+
+div{
+    text-align: center;
+    margin: 0 auto;
+}
+
+table, tr, td{
+    border: 2px solid black;
+    border-collapse: collapse;
+    margin: 0 auto;
+    text-align: center;
+    
+}
+
+form{
+    display: inline-block;
+}
+
+.fRow{
+    font-weight: bold;
+}
+
+
+a:hover   {color:blue; background-color:red; text-decoration:underline}
+a:active  {color:yellow; background-color:transparent; text-decoration:underline}
