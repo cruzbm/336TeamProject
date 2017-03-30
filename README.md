@@ -1,2 +1,2 @@
-# 336TeamProject
-Team Project for CST 336 Spring 2017
+# CST336TP1
+Team Project 1 with Meya

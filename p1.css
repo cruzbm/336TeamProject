@@ -1,0 +1,37 @@
+ 
+                h1{
+                    text-align: center;
+                    background-color: blue;
+                    font-family: sans-serif;
+                }
+                
+                body{
+                    text-align: center;
+                    width: 1000px;
+                    margin: 0 auto;
+                    background-color: #000080;
+                    color: white;
+                    font-family: sans-serif;
+                }
+                
+                main{
+                    margin: 0 auto;
+                }
+                
+                table {
+                    display: inline-block;
+                    padding-right:5px;
+                    border-color: solid black;
+                }
+                
+                td {
+                    width: 15px;
+                    height: 15px;
+                    border-color: solid black;
+                }
+                
+                div{
+                    margin: 0 auto;
+                    text-align: center;
+                    border-color: solid black;
+                }
