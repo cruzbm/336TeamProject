@@ -1,5 +1,7 @@
 <?php
 
+session_start();
+
 include "dbConnection.php";
 $dbConn = getDatabaseConnection('336TP');
 
@@ -21,16 +23,26 @@ function display(){
         
         $increment = 0;
         
-        foreach ($record as $records){
-            echo "<td>" .
-                 "<img src='img/" . $records['imageId'] . ".jpg' height=45 width=45>" .
-                 "<br />" .
-                 $records['partName'] . 
-                 "<br />" .
-                 $records['partPrice'] .
-                 "</td>";
+        foreach ($record as $records){ 
+            if ($increment%4 == 0){
+                echo "<tr>";
+            }
+            
+            echo "<td>" . 
+                 "<img src='img/" . $records['imageId'] . ".jpg' height='80' width='80'>" . 
+                 "<br />" . 
+                 "<a href='desc.php'>" . $records['partName'] . "</a>" .
+                 "<br />$" . 
+                 $records['partPrice'] . 
+                 "<br /> <input type='checkbox' name='addItem'>" .
+                 "</td>"; 
                  $increment++;
+                 
+            if ($increment%4 ==0){
+                echo "<tr>";
+            }
         }
+        
         
         echo "</table>";
     }
@@ -66,6 +78,10 @@ function getCal(){
         }
 }
 
+function getAction(){
+    echo "hello";
+}
+
 ?>
 
 <!DOCTYPE html>
@@ -81,10 +97,15 @@ function getCal(){
             <fieldset>
                 <form name="filter">
                     <select name="caliber">
+                        <option value="">Caliber</option>
                         <?=getCal()?>
                     </select>
                     
-                    <input type="submit">
+                    <input type="text" name="maxPrice" placeholder="Enter Max Price">
+                    
+                    <input type="checkbox" name="comWeap">Complete Build
+                    
+                    <input type="submit" value="Filter" onsubmit="getAction()">
                 </form>
             </fieldset>
             
@@ -94,6 +115,13 @@ function getCal(){
             <?=display()?>
         </div>
         
+        <br />
+        <br />
         
+        <div>
+            <input type="submit" name="addToCart" value="Add Items" onsubmit>
+            <input type="submit" name="cart" value="See Cart" onsubmit>
+            <input type="submit" name="checkout" value="Checkout" onsubmit>
+        </div>
     </body>
 </html>
