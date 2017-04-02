@@ -1,0 +1,57 @@
+
+                h1{
+                    text-align: center;
+                    background-color:#273746;
+                    font-family: sans-serif;
+                }
+                
+                body{
+                    text-align: center;
+                  
+                    margin: 0 auto;
+                    background-color: #717D7E  ;
+                    color: white;
+                    font-family: sans-serif;
+                }
+                
+                main{
+                    margin: 0 auto;
+                }
+                
+                table {
+                    display: inline-block;
+                    padding-right:5px;
+                    border-color: solid black;
+                }
+                
+                td {
+                    width: 15px;
+                    height: 15px;
+                    border-color: solid black;
+                }
+                
+                div{
+                    margin: 0 auto;
+                    text-align: center;
+                    border-color: solid black;
+                }
+                
+                nav a:hover{
+                    
+                    
+                    color:blue;
+                    
+                    
+                    
+                }
+                
+                nav a{
+                    
+                    font-size: 3em;
+                    text-align:center;
+                    margin: 0 auto;
+                    display:inline-block;
+                    color:black;
+                    
+                    
+                }
